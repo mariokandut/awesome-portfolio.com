@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{QeBL:function(e,n,l){"use strict";l.r(n);var t=l("q1tI"),a=l.n(t),o=l("Bl7J"),r=l("vrFN");n.default=function(){return a.a.createElement(o.a,null,a.a.createElement(r.a,{title:"Home"}),a.a.createElement("h1",null,"Hello Developer"),a.a.createElement("p",null,"We are building an index for awesome developer portfolios."))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-e320fbdc009fec61668d.js.map
