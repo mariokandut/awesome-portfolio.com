@@ -2,12 +2,12 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Hero from "../components/hero";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hello Developer</h1>
-    <p>We are building an index for awesome developer portfolios.</p>
+    <Hero />
   </Layout>
 );
 
