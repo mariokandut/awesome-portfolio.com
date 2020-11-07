@@ -1,14 +1,14 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [
-    "./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"
-  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {},
   plugins: [],
-}
+};
