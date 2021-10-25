@@ -41,7 +41,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            mariokandut
+            awesome developers
           </a>
         </Text>
       </FlexDiv>
