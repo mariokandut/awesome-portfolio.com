@@ -4,26 +4,25 @@ import { Link } from 'gatsby';
 import { FaLink } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
-const ReadMore = styled.p`
+const LinkWrapper = styled.p`
   position: absolute;
   bottom: 1rem;
   margin: 0;
   right: 0.5rem;
-  color: var(--dark);
+  color: var(--text);
   font-size: 1rem;
   line-height: 1;
-  border-bottom: 3px solid var(--text);
-
-  &:hover {
-    border-bottom: 3px solid var(--primary);
-  }
 `;
 const Wrapper = styled.div`
-  width: 300px;
+  width: 280px;
   height: 320px;
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: 0.5rem;
+  @media screen and (min-width: 375px) {
+    margin: 1rem;
+    width: 300px;
+  }
   border-radius: 1rem;
   box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.1);
   transition: 0.4s ease-out;
@@ -31,7 +30,7 @@ const Wrapper = styled.div`
 
   &:hover {
     box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.4);
-    ${ReadMore} {
+    ${LinkWrapper} {
       border-color: var(--primary);
       color: var(--primary);
     }
@@ -101,15 +100,16 @@ export const DeveloperCard = (props) => {
               ? `${description.substring(0, 100)}...`
               : description}
           </Description>
-          <Tags>
-            {tags.map((tag, index) => (
-              <Tag key={index}>{tag}</Tag>
-            ))}
-          </Tags>
+
           <CardFooter>
-            <ReadMore>
+            <Tags>
+              {tags.map((tag, index) => (
+                <Tag key={index}>{tag}</Tag>
+              ))}
+            </Tags>
+            <LinkWrapper>
               <FaLink />
-            </ReadMore>
+            </LinkWrapper>
           </CardFooter>
         </Content>
       </Wrapper>

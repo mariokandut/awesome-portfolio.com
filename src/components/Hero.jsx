@@ -5,7 +5,7 @@ import { SearchBar } from './SearchBar';
 
 const Wrapper = styled.div`
   text-align: center;
-  height: 50vh;
+  min-height: 50vh;
 `;
 
 const Title = styled.h1`
