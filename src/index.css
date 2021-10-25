@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span,
+li,
+input,
+label,
+textarea,
+button {
+  font-family: Karla, Helvetica, Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary);
+}
+
+.content {
+  max-width: 45rem;
+}
+
+/* Color palette from here: https://coolors.co/003049-d62828-f77f00-fcbf49-eae2b7*/
+
+:root {
+  --text: #003049;
+  --gray: #909090;
+  --primary: #b000ff;
+  --secondary: #d62828;
+  --tertiary: #f77f00;
+  /* #fcbf49; #eae2b7;*/
+}
