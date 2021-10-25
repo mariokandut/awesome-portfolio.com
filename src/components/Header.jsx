@@ -18,7 +18,7 @@ const Header = (props) => {
         <Link to="/">
           <Logo
             alt={`${siteTitle} Logo`}
-            src={require('../images/logo.svg')}
+            src={require('../assets/awesome-portfolio-logo.svg')}
           />
         </Link>
       </div>

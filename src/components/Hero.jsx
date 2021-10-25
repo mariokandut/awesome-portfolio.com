@@ -20,7 +20,7 @@ const Hero = () => {
         <p>
           We are building an index for awesome developer portfolios,
           <br />
-          as a source for inspiration, information and a great
+          as a source for inspiration, information and, as an awesome
           showcase.
           <br />
           <br />
