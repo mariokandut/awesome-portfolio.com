@@ -14,6 +14,7 @@ const StyledFooter = styled.div`
   margin-top: 4rem;
   a:hover {
     text-decoration: underline;
+    color: var(--primary);
   }
 `;
 

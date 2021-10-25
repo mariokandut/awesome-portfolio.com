@@ -23,9 +23,6 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
-a:hover {
-  color: var(--primary);
-}
 
 .content {
   max-width: 45rem;
