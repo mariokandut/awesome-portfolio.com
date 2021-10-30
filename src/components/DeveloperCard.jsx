@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { FaLink } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
@@ -76,13 +75,18 @@ const CardFooter = styled.div`
 const Tags = styled.p``;
 const Tag = styled.span`
   font-size: 0.5rem;
+  margin: 0 0.25rem;
   text-transform: uppercase;
 `;
 
 export const DeveloperCard = (props) => {
-  const { path, title, titleImage, description, tags } = props;
+  const { portfolioUrl, name, titleImage, description, tags } = props;
   return (
-    <Link to={path}>
+    <a
+      href={`https://${portfolioUrl}`}
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
       <Wrapper>
         <TitleImage
           style={{
@@ -90,11 +94,7 @@ export const DeveloperCard = (props) => {
           }}
         />
         <Content>
-          <Title>
-            {title.length > 40
-              ? `${title.substring(0, 40)}...`
-              : title}
-          </Title>
+          <Title>{name}</Title>
           <Description>
             {description.length > 100
               ? `${description.substring(0, 100)}...`
@@ -113,14 +113,14 @@ export const DeveloperCard = (props) => {
           </CardFooter>
         </Content>
       </Wrapper>
-    </Link>
+    </a>
   );
 };
 
 DeveloperCard.propTypes = {
-  path: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  titleImage: PropTypes.string.isRequired,
+  portfolioUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  titleImage: PropTypes.any.isRequired,
   description: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
 };
