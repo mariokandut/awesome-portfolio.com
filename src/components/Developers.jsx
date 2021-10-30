@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DeveloperCard } from './DeveloperCard';
+import useAllDeveloperPortfolios from '../useAllDeveloperPortfolios';
 
 const Wrapper = styled.div``;
 const Title = styled.h3``;
@@ -11,17 +12,30 @@ const CardWrapper = styled.div`
 `;
 
 export const Developers = () => {
+  const portfolios = useAllDeveloperPortfolios();
   return (
     <Wrapper>
       <Title>All Developers</Title>
       <CardWrapper>
-        <DeveloperCard
-          path="loremipsum"
-          title="Lorem Ipsum"
-          titleImage={require('../assets/markus-spiske-hvSr_CVecVI-unsplash.jpg')}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut justo finibus, euismod neque euismod, posuere arcu. Ut sed orci in libero ullamcorper lacinia at eget lacus."
-          tags={['typescript, react, gatsby']}
-        />
+        {portfolios.map(({ node }) => {
+          const {
+            name,
+            portfolioUrl,
+            titleImage,
+            description,
+            tags,
+          } = node.frontmatter;
+          return (
+            <DeveloperCard
+              key={node.id}
+              portfolioUrl={portfolioUrl}
+              name={name}
+              titleImage={titleImage.childImageSharp.fixed.src}
+              description={description}
+              tags={tags}
+            />
+          );
+        })}
       </CardWrapper>
     </Wrapper>
   );
