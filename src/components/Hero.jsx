@@ -1,11 +1,9 @@
 import React from 'react';
 import { FlexDiv } from '../styled/index';
 import styled from 'styled-components';
-import { SearchBar } from './SearchBar';
 
 const Wrapper = styled.div`
   text-align: center;
-  min-height: 50vh;
 `;
 
 const Title = styled.h1`
@@ -29,7 +27,6 @@ const Hero = () => {
             welcome.
           </i>
         </p>
-        <SearchBar />
       </FlexDiv>
     </Wrapper>
   );
