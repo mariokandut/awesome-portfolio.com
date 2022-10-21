@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import '../index.css';
 import { Developers } from '../components/Developers';
 
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />

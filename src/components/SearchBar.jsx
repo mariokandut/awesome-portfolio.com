@@ -40,8 +40,15 @@ const StyledInputWrapper = styled.div`
   position: relative;
 `;
 
-export const SearchBar = () => {
+
+
+export const SearchBar = (props) => {
   const [searchText, setSearchText] = useState('');
+  const handleChange = (ev) => {
+      const filter = ev.target.value;
+      setSearchText(filter);
+      props.cb(filter.trim().toLowerCase());
+  }
   return (
     <Wrapper>
       <FlexDiv column>
@@ -50,7 +57,7 @@ export const SearchBar = () => {
             type="text"
             placeholder="frontend developer"
             value={searchText}
-            onChange={(ev) => setSearchText(ev.target.value)}
+            onChange={handleChange}
           />
           <IconWrapper>
             <FaSearch />
