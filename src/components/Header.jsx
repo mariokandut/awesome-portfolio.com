@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import logo from '../assets/awesome-portfolio-logo.svg'
 
 const Logo = styled.img`
   margin: 1rem;
@@ -18,7 +19,7 @@ const Header = (props) => {
         <Link to="/">
           <Logo
             alt={`${siteTitle} Logo`}
-            src={require('../assets/awesome-portfolio-logo.svg')}
+            src={logo}
           />
         </Link>
       </div>

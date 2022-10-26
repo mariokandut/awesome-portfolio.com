@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Layout from '../components/layout';
 
 export default function developerPortfolioTemplate({
@@ -10,7 +10,7 @@ export default function developerPortfolioTemplate({
   const { frontmatter } = markdownRemark;
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <div>
         <h1>{frontmatter.name}</h1>
         <h2>{frontmatter.date}</h2>
