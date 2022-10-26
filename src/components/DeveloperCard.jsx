@@ -42,7 +42,8 @@ const Wrapper = styled.div`
 const TitleImage = styled.div`
   height: 150px;
   width: 100%;
-  background-size: cover;
+  background-size: 300px;
+  background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   border-top-right-radius: 10px;
@@ -71,8 +72,10 @@ const CardFooter = styled.div`
   position: absolute;
   width: 100%;
   bottom: 0;
-}`;
-const Tags = styled.p``;
+`;
+const Tags = styled.p`
+  margin-bottom: 1rem;
+`;
 const Tag = styled.span`
   font-size: 0.5rem;
   margin: 0 0.25rem;
